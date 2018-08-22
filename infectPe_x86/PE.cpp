@@ -81,9 +81,9 @@ void addSection(int sizeShellCode, PE_Info PEfile, PE_Info *newPE, IMAGE_SECTION
 	sectionHeader->SizeOfRawData = align_up(sizeShellCode, *fileAlignment);
 	///sectionHeader->VirtualAddress = align(sectionHeader->Misc.VirtualSize, *sectionAlignment, PEfile.pSectionHeader[*numberOfSections - 2]->VirtualAddress);
 	sectionHeader->VirtualAddress = PEfile.pSectionHeader[*numberOfSections - 2]->VirtualAddress + align_up(PEfile.pSectionHeader[*numberOfSections-2]->Misc.VirtualSize
-																											? PEfile.pSectionHeader[*numberOfSections-2]->Misc.VirtualSize :
-																											  PEfile.pSectionHeader[*numberOfSections - 2]->SizeOfRawData
-																												, PEfile.pNtHeaders->OptionalHeader.SectionAlignment);
+														? PEfile.pSectionHeader[*numberOfSections-2]->Misc.VirtualSize :
+														PEfile.pSectionHeader[*numberOfSections - 2]->SizeOfRawData
+														, PEfile.pNtHeaders->OptionalHeader.SectionAlignment);
 	
 
 	
