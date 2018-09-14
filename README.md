@@ -9,6 +9,6 @@ The first part is building a section in the executable file.
 
 The second part is the injection of an executable code inside that part.
 
-The third part changes the behavior of the program, as the injection code is first implemented (not yet done)
+The third part changes the behavior of the program, as the injection code is first implemented.
 
-The fourth part of the code injection is included in the main part of the program (not yet done)
+The fourth part of the code injection is included in the main part of the program.
